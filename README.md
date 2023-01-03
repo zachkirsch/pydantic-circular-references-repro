@@ -16,6 +16,18 @@ class Foo(pydantic.BaseModel):
 ```
 
 ```python
+# bar.py
+import pydantic
+
+class Bar(pydantic.BaseModel):
+    bar_field: "Foo"
+
+from .foo import Foo
+
+Bar.update_forward_refs()
+```
+
+```python
 # baz.py
 import pydantic
 
@@ -26,18 +38,6 @@ class Baz(Bar):
     ...
 
 Baz.update_forward_refs()
-```
-
-```python
-# bar.py
-import pydantic
-
-class Bar(pydantic.BaseModel):
-    bar_field: "Foo"
-
-from .foo import Foo
-
-Bar.update_forward_refs()
 ```
 
 To repro the error, run:
