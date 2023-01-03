@@ -1,6 +1,6 @@
 ## Pydantic circular references repro
 
-This repo is a repro of \<ISSUE\>. 
+This repo is a repro of https://github.com/pydantic/pydantic/issues/4902. 
 
 There are three pydantic models:
 
@@ -48,7 +48,7 @@ poetry install
 poetry run python src/main.py
 ```
 
-`Baz.update_forward_refs()` fails with the following errors:
+`Baz.update_forward_refs()` fails with the following error:
 
 ```
 $ poetry run python src/main.py
