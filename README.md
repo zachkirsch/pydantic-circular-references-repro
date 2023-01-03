@@ -33,7 +33,6 @@ import pydantic
 
 from .bar import Bar 
 
-# we're inherited from Bar (defined below)
 class Baz(Bar):
     ...
 
