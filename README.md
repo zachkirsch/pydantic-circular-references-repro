@@ -21,6 +21,7 @@ import pydantic
 
 from .bar import Bar 
 
+# we're inherited from Bar (defined below)
 class Baz(Bar):
     ...
 
@@ -78,4 +79,4 @@ NameError: name 'Foo' is not defined
 `module.__dict__`, but `Foo` is not in scope in `baz.py`, so it throws.
 
 Possible solution: Pydantic should recognize that `bar_field` is actually defined
-in `bar.py`, and uses the `module.__dict__` of `bar.py` when resolving `Foo`.
+in `bar.py`, and use the `module.__dict__` of `bar.py` when resolving `Foo`.
