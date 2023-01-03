@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pydantic_circular_references_repro"
+version = "0.1.0"
+description = ""
+authors = ["Zach Kirsch <zachkirsch@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.7.13"
+pydantic = "^1.10.4"
+mypy = "^0.991"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
